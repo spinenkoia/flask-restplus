@@ -5,11 +5,8 @@ import itertools
 import re
 
 from inspect import isclass, getdoc
-try:
-    from collections.abc import OrderedDict, Hashable
-except ImportError:
-    # TODO Remove this to drop Python2 support
-    from collections import OrderedDict, Hashable
+from collections import OrderedDict
+from collections.abc import Hashable
 from six import string_types, itervalues, iteritems, iterkeys
 
 from flask import current_app
