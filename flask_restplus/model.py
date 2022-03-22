@@ -5,11 +5,8 @@ import copy
 import re
 import warnings
 
-try:
-    from collections.abc import OrderedDict, MutableMapping
-except ImportError:
-    # TODO Remove this to drop Python2 support
-    from collections import OrderedDict, MutableMapping
+from collections import OrderedDict
+from collections.abc import MutableMapping
 from six import iteritems, itervalues
 from werkzeug.utils import cached_property
 
